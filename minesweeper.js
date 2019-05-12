@@ -16,8 +16,13 @@ document.addEventListener('DOMContentLoaded', startGame)
  }
 
 function startGame () {
-  // Don't remove this function call: it makes the game work!
-  lib.initBoard()
+	board.cells.forEach(
+		function(cell){
+			cell.surroundingMines = countSurroundingMines(cell);
+		}
+	);
+	// Don't remove this function call: it makes the game work!
+	lib.initBoard()
 }
 
 // Define this function to look for a win condition:
