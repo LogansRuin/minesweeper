@@ -78,9 +78,15 @@ function layMines(cells){
 	//get number of mines
 	let numOfMines = 2;
 
-	//lay mines at random
-	let randomNumber = Math.floor(Math.random()*cells.length);
-	return randomNumber;
+	while(numOfMines > 0) {
+		//get a random cell
+		let randomCell = Math.floor(Math.random()*cells.length);
+		//check that there is no mine before laying
+		if(cells[randomCell].isMine === false){
+			cells[randomCell].isMine = true;
+			numOfMines--;
+		}
+	}
 }
 
 function generateBoard(){
@@ -107,8 +113,9 @@ function generateBoard(){
 		}
 	}
 	console.log(board)
-	console.log(layMines(board.cells));
+	
 	// lay mines
-
+	layMines(board.cells);
+	
 	return board;
 }
