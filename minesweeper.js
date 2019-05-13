@@ -67,7 +67,6 @@ function generateCell(row,col,isMine){
 		isMarked: false,
 		hidden: true
 	}
-
 	return cell;
 }
 
@@ -77,9 +76,25 @@ function generateBoard(){
 	};
 	// define grid size
 	board.gridSize = 16;
-	for (var i = 0; i < board.gridSize.length; i++) {
-		board.cells.push({})
-		console.log(i)
+	//columns and rows will be equal to the square root of gridSize
+	let row = 0;
+	let col = 0;
+	const numOfRows = Math.sqrt(board.gridSize);
+	const numOfCols = numOfRows;
+	
+	//loop to create each row
+	for( var i = 0; i < numOfRows; i++) {
+
+		//loop to create a cell for each column in this row
+		for (var j = 0; j < numOfCols; j++) {
+			if(col > numOfCols){
+				col = 0;
+			}
+			//generate cell
+			board.cells.push(generateCell(row,col,true));
+			col++
+		}
+		row++
 	}
 	console.log(board)
 	
