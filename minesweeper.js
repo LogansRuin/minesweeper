@@ -60,7 +60,12 @@ function countSurroundingMines (cell) {
 }
 
 function generateBoard(){
-	board = {
+	let board = {};
+	// define board size
+	// lay mines
+
+	/*
+	let board = {
 		cells: [
 			{row: 0, col: 0, isMine: false, hidden: true}, 
 			{row: 0, col: 1, isMine: false, hidden: true}, 
@@ -73,5 +78,6 @@ function generateBoard(){
 			{row: 2, col: 2, isMine: false, hidden: true}
 		]
 	}
+	*/
 	return board;
 }
