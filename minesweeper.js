@@ -72,7 +72,9 @@ function generateCell(row,col,isMine){
 }
 
 function generateBoard(){
-	let board = {};
+	let board = {
+		cells: []
+	};
 	// define board size
 	// lay mines
 
