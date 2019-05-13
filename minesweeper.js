@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', startGame)
 
 // Define your `board` object here!
- var board = generateBoard();
+var board = generateBoard();
 
 function startGame () {
 	//loop through cells and label surrounding mines
