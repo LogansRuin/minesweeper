@@ -23,7 +23,7 @@ function startGame () {
 	);
 
 	//Check for win
-	document.addEventListener("click", checkForWin());
+	document.addEventListener("click", function(event){checkForWin()});
 
 	// Don't remove this function call: it makes the game work!
 	lib.initBoard()
@@ -34,12 +34,29 @@ function startGame () {
 // 1. Are all of the cells that are NOT mines visible?
 // 2. Are all of the mines marked?
 function checkForWin () {
-	//check all cells that are NOT mines are visible
+var win = true;
 
+	board.cells.forEach(
+		function(cell){
+			//check all of the mines are marked
+			if(cell.isMine == true && cell.isMarked == false){
+				win = false;
+				console.log ('there are mines that are not marked')
+			}
+			//check all cells that are NOT mines are visible
+			if(cell.isMine == false && cell.hidden == true){
+				win = false;
+				console.log ('there are still hidden cells that are not mines')
+			}
+		}
+	);
 	
 	// You can use this function call to declare a winner (once you've
 	// detected that they've won, that is!)
-	//   lib.displayMessage('You win!')
+	if(win){
+		lib.displayMessage('You win!')
+		console.log(board);
+	}
 }
 
 // Define this function to count the number of mines around the cell
