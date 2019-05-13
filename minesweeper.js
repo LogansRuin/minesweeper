@@ -27,12 +27,10 @@ function checkForWin () {
 			//check all of the mines are marked
 			if(cell.isMine == true && cell.isMarked == false){
 				win = false;
-				console.log ('there are mines that are not marked')
 			}
 			//check all cells that are NOT mines are visible
 			if(cell.isMine == false && cell.hidden == true){
 				win = false;
-				console.log ('there are still hidden cells that are not mines')
 			}
 		}
 	);
@@ -116,6 +114,6 @@ function generateBoard(){
 	
 	// lay mines
 	layMines(board.cells);
-	
+
 	return board;
 }
