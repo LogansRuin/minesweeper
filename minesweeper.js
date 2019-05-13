@@ -59,6 +59,16 @@ function countSurroundingMines (cell) {
 	return count;
 }
 
+function generateCell(row,col,isMine){
+	let cell = {
+		row: row,
+		col: col,
+		isMine: isMine,
+		isMarked: false,
+		hidden: true
+	}
+}
+
 function generateBoard(){
 	let board = {};
 	// define board size
