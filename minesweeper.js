@@ -37,7 +37,6 @@ function checkForWin () {
 	
 	if(win){
 		lib.displayMessage('You win!')
-		console.log(board);
 	}
 }
 
@@ -110,7 +109,6 @@ function generateBoard(){
 			board.cells.push(generateCell(row,col,false));
 		}
 	}
-	console.log(board)
 	
 	// lay mines
 	layMines(board.cells);
