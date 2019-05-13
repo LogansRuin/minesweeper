@@ -24,6 +24,7 @@ function startGame () {
 
 	//Check for win
 	document.addEventListener("click", function(event){checkForWin()});
+	document.addEventListener("contextmenu", function(event){checkForWin()});
 
 	// Don't remove this function call: it makes the game work!
 	lib.initBoard()
