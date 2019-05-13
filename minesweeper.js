@@ -70,6 +70,19 @@ function generateCell(row,col,isMine){
 	return cell;
 }
 
+function calcNumOfMines(difficulty,gridSize){
+	//Calculate number of mines to lay based on deficulty
+}
+
+function layMines(cells){
+	//get number of mines
+	let numOfMines = 2;
+
+	//lay mines at random
+	let randomNumber = Math.floor(Math.random()*cells.length);
+	return randomNumber;
+}
+
 function generateBoard(){
 	let board = {
 		cells: []
@@ -91,13 +104,13 @@ function generateBoard(){
 				col = 0;
 			}
 			//generate cell
-			board.cells.push(generateCell(row,col,true));
+			board.cells.push(generateCell(row,col,false));
 			col++
 		}
 		row++
 	}
 	console.log(board)
-	
+	console.log(layMines(board.cells));
 	// lay mines
 
 	/*
