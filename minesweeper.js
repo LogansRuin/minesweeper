@@ -75,7 +75,14 @@ function generateBoard(){
 	let board = {
 		cells: []
 	};
-	// define board size
+	// define grid size
+	board.gridSize = 16;
+	for (var i = 0; i < board.gridSize.length; i++) {
+		board.cells.push({})
+		console.log(i)
+	}
+	console.log(board)
+	
 	// lay mines
 
 	/*
