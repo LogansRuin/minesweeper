@@ -67,6 +67,8 @@ function generateCell(row,col,isMine){
 		isMarked: false,
 		hidden: true
 	}
+
+	return cell;
 }
 
 function generateBoard(){
