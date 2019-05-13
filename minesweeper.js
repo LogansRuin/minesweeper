@@ -1,19 +1,7 @@
 document.addEventListener('DOMContentLoaded', startGame)
 
 // Define your `board` object here!
- var board = {
- 	cells: [
- 		{row: 0, col: 0, isMine: false, hidden: true}, 
- 		{row: 0, col: 1, isMine: false, hidden: true}, 
- 		{row: 0, col: 2, isMine: false, hidden: true}, 
- 		{row: 1, col: 0, isMine: true, isMarked: false, hidden: true}, 
- 		{row: 1, col: 1, isMine: false, hidden: true}, 
- 		{row: 1, col: 2, isMine: false, hidden: true}, 
- 		{row: 2, col: 0, isMine: false, hidden: true}, 
- 		{row: 2, col: 1, isMine: true, isMarked: false, hidden: true}, 
- 		{row: 2, col: 2, isMine: false, hidden: true}
- 	]
- }
+ var board = generateBoard();
 
 function startGame () {
 	//loop through cells and label surrounding mines
@@ -71,3 +59,19 @@ function countSurroundingMines (cell) {
 	return count;
 }
 
+function generateBoard(){
+	board = {
+		cells: [
+			{row: 0, col: 0, isMine: false, hidden: true}, 
+			{row: 0, col: 1, isMine: false, hidden: true}, 
+			{row: 0, col: 2, isMine: false, hidden: true}, 
+			{row: 1, col: 0, isMine: true, isMarked: false, hidden: true}, 
+			{row: 1, col: 1, isMine: false, hidden: true}, 
+			{row: 1, col: 2, isMine: false, hidden: true}, 
+			{row: 2, col: 0, isMine: false, hidden: true}, 
+			{row: 2, col: 1, isMine: true, isMarked: false, hidden: true}, 
+			{row: 2, col: 2, isMine: false, hidden: true}
+		]
+	}
+	return board;
+}
