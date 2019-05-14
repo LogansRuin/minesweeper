@@ -66,3 +66,23 @@ div.hidden:hover {
 div.marked, div.marked:hover {
   background: no-repeat center/60% url("images/mark.svg") deepskyblue;
 }
+
+button#restart{
+  display: inline-block;
+  margin: 10px;
+  font-size: 2em;
+  padding: 2px;
+  border-radius: 50%;
+  border: 4px #e03d31 solid;
+  width: 150px;
+  height: 150px;
+  background-color: #F44336;
+  color: #fff3f2;
+  box-shadow: 5px 5px;
+}
+
+button#restart:hover{
+  border: 4px #F44336 solid;
+  background-color: #e03d31;
+  box-shadow: 3px 3px;
+}
