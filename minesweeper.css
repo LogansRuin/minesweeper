@@ -4,6 +4,9 @@ html, body {
 }
 
 body {
+  background-color: #A9DBA9;
+  background-image: url("images/bamboo-background.jpg");
+  background-size: cover;
   display: flex;
   align-items: center;
   justify-content: flex-center;
