@@ -1,6 +1,6 @@
 html, body {
   height: 100%;
-  font-family: 'Open Sans', sans-serif
+  font-family: 'Press Start 2P', monospace;
 }
 
 body {
@@ -11,12 +11,28 @@ body {
   align-items: center;
   justify-content: flex-center;
   flex-direction: column;
+  min-height: 900px;
+  margin: 0 auto;
 }
 
 #message, #notes {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+#title {
+  margin: 0 auto;
+  width: 100%;
+  background-color: rgba(169, 219, 169, 0.7);
+  font-family: 'Bungee Shade', sans-serif;
+  font-size: 2rem;
+  text-align: center;
+}
+
+h1{
+  margin: 0px;
+  padding: 0px;
 }
 
 #message {
@@ -26,6 +42,7 @@ body {
 .board {
   display: flex;
   flex-wrap: wrap;
+  cursor: url(images/panda-cursor.svg), move;
 }
 
 .board div {
@@ -45,7 +62,7 @@ body {
 }
 
 div.mine, div.mine:hover {
-  background: no-repeat center/60% url("images/bomb.svg") crimson;
+  background: no-repeat center/60% url("images/zookeeper.svg") #FFEDC5;
 }
 
 div.hidden {
@@ -67,13 +84,14 @@ div.hidden:hover {
 }
 
 div.marked, div.marked:hover {
-  background: no-repeat center/60% url("images/mark.svg") deepskyblue;
+  background: no-repeat center/60% url("images/bamboo.svg") #63B463;
 }
 
 button#restart{
   display: inline-block;
   margin: 10px;
-  font-size: 2em;
+  font-size: 1.3rem;
+  font-family: 'Press Start 2P', monospace;
   padding: 2px;
   border-radius: 50%;
   border: 4px #e03d31 solid;
