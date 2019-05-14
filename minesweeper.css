@@ -30,10 +30,11 @@ body {
   font-size: 2rem;
   width: 75px;
   height: 75px;
-  border: 1px #ccc dotted;
-  border-radius: 10%;
+  border-left: 4px #fff solid;
+  border-top: 4px #fff solid;
+  border-right: 4px #c0c0c0 solid;
+  border-bottom: 4px #c0c0c0 solid;
   background-color: white;
-  margin: 3px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -48,7 +49,7 @@ div.mine, div.mine:hover {
 }
 
 div.hidden {
-  background: #eee;
+  background: #e8e8e8;
 }
 
 div.hidden:hover {
