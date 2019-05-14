@@ -28,20 +28,17 @@ body {
 .board div {
   color: green;
   font-size: 2rem;
-  width: 75px;
-  height: 75px;
-  border-left: 4px #fff solid;
-  border-top: 4px #fff solid;
-  border-right: 4px #c0c0c0 solid;
-  border-bottom: 4px #c0c0c0 solid;
-  background-color: white;
+  width: 81px;
+  height: 81px;
+  border: 1px #E1B87C solid;
+  background-color: #FFE8C5;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .board div:hover {
-  background-color: white;
+  background-color: #FFE8C5;
 }
 
 div.mine, div.mine:hover {
@@ -49,11 +46,21 @@ div.mine, div.mine:hover {
 }
 
 div.hidden {
-  background: #e8e8e8;
+  background: #63B463;
+  width: 75px;
+  height: 75px;
+  border-left: 4px #A9DBA9 solid;
+  border-top: 4px #A9DBA9 solid;
+  border-right: 4px #2D882D solid;
+  border-bottom: 4px #2D882D solid;
 }
 
 div.hidden:hover {
-  background: #ccc;
+  background: #63B463;
+  border-right: 4px #A9DBA9 solid;
+  border-bottom: 4px #A9DBA9 solid;
+  border-left: 4px #2D882D solid;
+  border-top: 4px #2D882D solid;
 }
 
 div.marked, div.marked:hover {
