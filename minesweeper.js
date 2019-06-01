@@ -125,7 +125,7 @@ function generateBoard(){
 	}
 	
 	// lay mines
-	layMines(board.cells, 'normal');
+	layMines(board.cells, 'easy');
 
 	return board;
 }
